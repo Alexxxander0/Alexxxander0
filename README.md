@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Alexxx_ander</h1>
-<h3 align="center">A passionate dev who loves Minecraft scripting and coding</h3>
+<h3 align="center">A unique dev who loves Minecraft's backend and coding</h3>
 
 - 🔭 I’m currently working on [Delta | Community](https://deltamcbg.com)
 
