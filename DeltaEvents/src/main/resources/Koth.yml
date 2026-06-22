@@ -1,0 +1,70 @@
+# =====================================================================
+# Delta Events - KOTH (King of the Hill) Event Configuration
+# =====================================================================
+
+# The world where the KOTH event takes place
+event-world: "BuilderUniverse"
+
+# Countdown in seconds before the event starts (when /koth start is run)
+countdown-seconds: 5
+
+# Whether PvP is enabled in the event world during the event
+pvp: true
+
+# Duration of the KOTH event in seconds (10 minutes = 600 seconds)
+duration-seconds: 600
+
+# Region of the KOTH arena itself (the hill where timers tick and victory is determined)
+# Format: "x,y,z"
+arena-region:
+  from: 32,65,-75
+  to: 34,65,-73
+
+# Spawn location where players go when /koth stop is run or when they are teleported back
+spawn-location:
+  x: 0.5
+  y: 64.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+# Editor item configuration for the arena region
+editor-item:
+  arena:
+    material: GOLDEN_AXE
+    name: '&#FFC107&lKOTH Arena Region Editor'
+    lore:
+    - '&7Ляв клик: Точка 1'
+    - '&7Десен клик: Точка 2'
+    nbt-data: 104
+  spawn:
+    material: BLAZE_ROD
+    name: '&#4AA3FF&lKOTH Spawn Location Editor'
+    lore:
+    - '&7Кликни върху блок за задаване на спаун'
+    nbt-data: 105
+
+# Command rewards run from CONSOLE when a player wins
+# The placeholder {player} will be replaced with the winner's name
+reward-commands:
+- give {player} diamond 64
+- eco give {player} 1000
+
+# Schedule information displayed by placeholder %deltaevents_koth_schedule%
+scheduled-placeholder:
+  days: '"monday", "tuesday", "още  и още, всеки ден ще има"'
+
+# Placeholder update intervals in seconds.
+# Value in seconds. Set to 0 to update on every request (no caching).
+placeholders:
+  '%deltaevents_koth_cappers%': 1
+  '%deltaevents_koth_time_left%': 1
+  '%deltaevents_koth_schedule%': 30
+
+# Sounds used for different parts of the event (aliases defined in config.yml)
+sounds:
+  countdown: countdown
+  start: start
+  stop: stop
+  win: win
+  notification: notification

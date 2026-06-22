@@ -1,0 +1,240 @@
+# =====================================================================
+# Delta Events Lang Configuration
+# =====================================================================
+prefix: ""
+deltaevents_usage: "{prefix} &#4AA3FF&lИзползване &8• &#E6E6E6/deltaevents <help|reload|list>"
+help_header: "&#4AA3FF&lПомощ &8• &#E6E6E6{name} &8v{version} &7от {author}"
+help_commands: "&#4AA3FF&lКоманди &8• &#E6E6E6/deltaevents help, /deltaevents reload, /deltaevents list"
+no_permission: "{prefix} &#FF4C4C&lГрешка &8• &#E6E6E6Нямате право да използвате тази команда."
+reload_usage: "{prefix} &#4AA3FF&lИзползване &8• &#E6E6E6/deltaevents reload"
+reload_ok: "{prefix} &#4CFF7A&lУспех &8• &#E6E6E6Презаредено: &f{file}"
+reload_fail: "{prefix} &#FF4C4C&lГрешка &8• &#E6E6E6Неуспешно презареждане на &f{file}&#E6E6E6: {reason}"
+
+# =====================================================================
+# Sumo Event Messages
+# =====================================================================
+sumo:
+  prefix: "&#4AA3FF&lСумо &8• &7"
+  rules:
+    - "&#4AA3FF&lПравила на евента:"
+    - "&8• &#E6E6E6Забранена е отборната игра, всеки играе сам за себе си!"
+    - "&8• &#E6E6E6Забранено е използването на всякакви нелегални клиенти!"
+    - "&8• &#E6E6E6Който бъде избутан извън ограждението на арената (spruce slab) е елиминиран от евента"
+    - "&8• &#E6E6E6Победителят е последният оцелял на арената!"
+  only_in_world: "{sumo_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Тази команда може да се използва само в уърълда {world}!"
+  world_not_loaded: "{sumo_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Светът &f{world} &#E6E6E6не е зареден!"
+  countdown: "{sumo_prefix}&#E6E6E6Евентът започва след &b{time} &#E6E6E6секунди!"
+  started: "{sumo_prefix}&#E6E6E6Евентът започна! Успех на всички!"
+  stopped: "{sumo_prefix}&#E6E6E6Евентът беше спрян!"
+  eliminated: "{sumo_prefix}&#FF4C4C&lЕлиминация &8• &f{player} &#E6E6E6стъпи на забранена зона и беше елиминиран!"
+  winner: "{sumo_prefix}&#4CFF7A&lПобедител &8• &f{player} &#E6E6E6спечели Сумо евента!"
+  winner_title: "&#4CFF7A&lПОБЕДИТЕЛ!"
+  winner_subtitle: "&f{player} спечели Сумото!"
+  no_winner: "{sumo_prefix}&#E6E6E6Няма победител в Сумо евента!"
+  no_permission: "{sumo_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Нямате право да използвате тази команда."
+  already_running: "{sumo_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Вече има активен или стартиращ Сумо евент!"
+  not_running: "{sumo_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6В момента няма активен Сумо евент."
+  round_title: "&#4AA3FF&lРУНД {round}"
+  round_subtitle: "&#E6E6E6Пригответе се!"
+  invalid_round: "{sumo_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Моля въведете валидно число за рунд."
+  rules_sent: "{sumo_prefix}&#4CFF7A&lУспех &8• &#E6E6E6Правилата бяха изпратени в &f{world}"
+  rules_sent_console: "&aПравилата бяха изпратени в {world}"
+  countdown_started: "{sumo_prefix}&#4CFF7A&lУспех &8• &#E6E6E6Стартирано отброяване за Сумо евент."
+  stop_success: "{sumo_prefix}&#FF4C4C&lУспех &8• &#E6E6E6Сумо евентът беше спрян успешно."
+  round_started: "{sumo_prefix}&#4CFF7A&lУспех &8• &fПуснат Round {round} title на играчите"
+  reload_success: "{sumo_prefix}&#4CFF7A&lУспех &8• &#E6E6E6Модулът беше спрян и презареден успешно!"
+  reload_error: "{sumo_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Грешка при презареждане на Сумо: &f{reason}"
+  usage_header: "&8&m----------------------------------------"
+  usage_title: "&#4AA3FF&lСумо Команди:"
+  usage_rules: " &8• &f/sumo rules &7- Показва правилата на евента"
+  usage_start: " &8• &f/sumo start &7- Стартира евента"
+  usage_round: " &8• &f/sumo round <номер> &7- Стартира определен рунд"
+  usage_giveitems: " &8• &f/sumo giveitems &7- Дава Сумо пръчката"
+  usage_stop: " &8• &f/sumo stop &7- Спира евента"
+  usage_reload: " &8• &f/sumo reload &7- Релоудва само Сумо евента"
+  usage_editor: " &8• &f/sumo editor <spawn|participant|floor> &7- Дава предмет за редактиране"
+  editor_point1_set: "{sumo_prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b1 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+  editor_point2_set: "{sumo_prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b2 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+  editor_saved: "{sumo_prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Регионът &f{region} &#E6E6E6беше записан в конфигурацията!"
+  usage_footer: "&8&m----------------------------------------"
+  getitems_success: "{sumo_prefix}&#4CFF7A&lУспех &8• &#E6E6E6Получихте Сумо пръчката!"
+  only_players: "&#FF4C4C&lГрешка &8• &#E6E6E6Тази команда може да се използва само от играчи!"
+
+# =====================================================================
+# KOTH Event Messages
+# =====================================================================
+koth:
+  prefix: "&#4AA3FF&lKOTH &8• &7"
+  only_in_world: "{koth_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Тази команда може да се използва само в уърълда {world}!"
+  countdown: "{koth_prefix}&#E6E6E6Евентът започва след &b{time} &#E6E6E6секунди!"
+  started: "{koth_prefix}&#E6E6E6Евентът започна! Успех на всички!"
+  stopped: "{koth_prefix}&#E6E6E6Евентът беше спрян!"
+  winner: "{koth_prefix}&f{player} &#E6E6E6спечели KOTH евента, задържайки се на върха за &b{time}&#E6E6E6!"
+  winner_title: "&#4CFF7A&lПОБЕДИТЕЛ!"
+  winner_subtitle: "&f{player} спечели KOTH с {time} на арената!"
+  no_winner: "{koth_prefix}&#E6E6E6Няма победител в KOTH евента!"
+  no_permission: "{koth_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Нямате право да използвате тази команда."
+  already_running: "{koth_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Вече има активен или стартиращ KOTH евент!"
+  not_running: "{koth_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6В момента няма активен KOTH евент."
+  reload_success: "{koth_prefix}&#4CFF7A&lУспех &8• &#E6E6E6Модулът беше спрян и презареден успешно!"
+  reload_error: "{koth_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Грешка при презареждане на KOTH: &f{reason}"
+  usage_header: "&8&m----------------------------------------"
+  usage_title: "&#4AA3FF&lKOTH Команди:"
+  usage_start: " &8• &f/koth start &7- Стартира евента"
+  usage_stop: " &8• &f/koth stop &7- Спира евента"
+  usage_editor: " &8• &f/koth editor &7- Дава предмет за редактиране на арената"
+  usage_reload: " &8• &f/koth reload &7- Релоудва KOTH евента"
+  usage_footer: "&8&m----------------------------------------"
+  editor_point1_set: "{koth_prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b1 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+  editor_point2_set: "{koth_prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b2 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+  editor_saved: "{koth_prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Регионът &f{region} &#E6E6E6беше записан в конфигурацията!"
+  only_players: "&#FF4C4C&lГрешка &8• &#E6E6E6Тази команда може да се използва само от играчи!"
+  action_bar_holding: "&a&lKOTH &8• &aОкупиран от: &f{player} &8| &7Оставащо време: &f{remaining}"
+  action_bar_empty: "&a&lKOTH &8• &cНикой не окупира арената! &8| &7Оставащо време: &f{remaining}"
+  world_not_loaded: "{koth_prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Светът &f{world} &#E6E6E6не е зареден!"
+
+# =====================================================================
+# MrBeast Event Messages
+# =====================================================================
+mrbeast:
+  only_players: "&#FF4C4C&lГрешка &8• &#E6E6E6Тази команда може да се използва само от играчи!"
+  prefix: "&#FF4C4C&lMrBeast &8• &7"
+  already_running:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Играта вече е стартирана!"
+    display: "CHAT"
+  world_not_loaded:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Светът не е зареден!"
+    display: "CHAT"
+  countdown:
+    text: "{prefix}&#E6E6E6Играта започва след &b{time} &#E6E6E6секунди!"
+    display: "CHAT,ACTIONBAR"
+  started:
+    text: "&#FFC107&lMRBEAST ЗАПОЧНА!"
+    display: "TITLE,CHAT"
+  round_start:
+    text: "&#4AA3FF&lРУНД {round} &8| &7Време за избор: {time} сек!"
+    display: "TITLE,CHAT"
+  round_countdown:
+    text: "&eОстават &b{time} &eсекунди за избор!"
+    display: "ACTIONBAR"
+  choices_locked:
+    text: "&#FF4C4C&lИЗБОРЪТ Е ЗАКЛЮЧЕН!"
+    display: "TITLE,CHAT"
+  color_eliminated:
+    text: "&#FF4C4C&lЕлиминиран цвят: {color}"
+    display: "TITLE,CHAT"
+  player_eliminated:
+    text: "{prefix}&f{player} &#E6E6E6беше елиминиран!"
+    display: "CHAT"
+  winner:
+    text: "&#4CFF7A&l{player} спечели MrBeast!"
+    display: "TITLE,CHAT"
+  no_winner:
+    text: "{prefix}&#E6E6E6Няма победител!"
+    display: "CHAT"
+  stopped:
+    text: "{prefix}&#E6E6E6Играта беше спряна!"
+    display: "CHAT"
+  not_running:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Играта не е стартирана!"
+    display: "CHAT"
+  stop_success:
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Играта беше спряна!"
+    display: "CHAT"
+  reload_success:
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Конфигурацията е презаредена!"
+    display: "CHAT"
+  no_permission:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Нямате права!"
+    display: "CHAT"
+  countdown_started:
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Стартирано отброяване!"
+    display: "CHAT"
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Получихте редактор за регион: &f{region}"
+    display: "CHAT"
+  editor_point1_set:
+    text: "{prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b1 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+    display: "CHAT"
+  editor_point2_set:
+    text: "{prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b2 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+    display: "CHAT"
+  editor_saved:
+    text: "{prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Регионът &f{region} &#E6E6E6беше записан в конфигурацията!"
+    display: "CHAT"
+
+# =====================================================================
+# FiveM Event Messages
+# =====================================================================
+fivem:
+  only_players: "&#FF4C4C&lГрешка &8• &#E6E6E6Тази команда може да се използва само от играчи!"
+  prefix: "&#FF4C4C&lFiveM &8• &7"
+  already_running:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Играта вече е стартирана!"
+    display: "CHAT"
+  world_not_loaded:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Светът не е зареден!"
+    display: "CHAT"
+  countdown:
+    text: "{prefix}&#E6E6E6Играта започва след &b{time} &#E6E6E6секунди!"
+    display: "CHAT,ACTIONBAR"
+  started:
+    text: "&#FFC107&lFIVEM ЗАПОЧНА!"
+    display: "TITLE,CHAT"
+  round_start:
+    text: "Застанете на {color}!"
+    display: "TITLE,ACTIONBAR"
+  blocks_disappeared:
+    text: "&#FF4C4C&lБлоковете изчезнаха!"
+    display: "ACTIONBAR"
+  player_eliminated:
+    text: "{prefix}&f{player} &#E6E6E6беше елиминиран!"
+    display: "CHAT"
+  winner:
+    text: "&#4CFF7A&l{player} спечели FiveM!"
+    display: "TITLE,CHAT"
+  no_winner:
+    text: "{prefix}&#E6E6E6Няма победител!"
+    display: "CHAT"
+  stopped:
+    text: "{prefix}&#E6E6E6Играта беше спряна!"
+    display: "CHAT"
+  not_running:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Играта не е стартирана!"
+    display: "CHAT"
+  stop_success:
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Играта беше спряна!"
+    display: "CHAT"
+  reload_success:
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Конфигурацията е презаредена!"
+    display: "CHAT"
+  no_permission:
+    text: "{prefix}&#FF4C4C&lГрешка &8• &#E6E6E6Нямате права!"
+    display: "CHAT"
+  countdown_started:
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Стартирано отброяване!"
+    display: "CHAT"
+    text: "{prefix}&#4CFF7A&lУспех &8• &#E6E6E6Получихте редактор за регион: &f{region}"
+    display: "CHAT"
+  editor_point1_set:
+    text: "{prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b1 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+    display: "CHAT"
+  editor_point2_set:
+    text: "{prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Точка &b2 &f({x}, {y}, {z}) &#E6E6E6беше зададена за &f{region}"
+    display: "CHAT"
+  editor_saved:
+    text: "{prefix}&#4CFF7A&lРедактор &8• &#E6E6E6Регионът &f{region} &#E6E6E6беше записан в конфигурацията!"
+    display: "CHAT"
+
+
+color:
+  usage_header: "&8&m----------------------------------------"
+  usage_title: "&#4AA3FF&lColor Event Команди:"
+  usage_mrbeast_start: " &8• &f/color mrbeast start &7- Стартира MrBeast"
+  usage_mrbeast_stop: " &8• &f/color mrbeast stop &7- Спира MrBeast"
+  usage_mrbeast_editor: " &8• &f/color mrbeast editor spawn &7- Редактор на спаун"
+  usage_mrbeast_reload: " &8• &f/color mrbeast reload &7- Релоудва MrBeast"
+  usage_fivem_start: " &8• &f/color fivem start &7- Стартира FiveM"
+  usage_fivem_stop: " &8• &f/color fivem stop &7- Спира FiveM"
+  usage_fivem_editor: " &8• &f/color fivem editor [arena|spawn] &7- Редактор за FiveM"
+  usage_fivem_reload: " &8• &f/color fivem reload &7- Релоудва FiveM"
+  usage_footer: "&8&m----------------------------------------"

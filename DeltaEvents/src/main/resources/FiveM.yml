@@ -1,0 +1,36 @@
+# =====================================================================
+# Delta Events - FiveM Event Configuration
+# =====================================================================
+
+countdown-seconds: 5
+initial-round-duration-seconds: 5.0
+min-round-duration-seconds: 1.5
+round-duration-reduction-per-round: 0.5
+
+spawn-location:
+  x: 0.5
+  y: 65.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+arena-region:
+  from: "-15,64,-15"
+  to: "15,65,15"
+
+editor-item:
+  arena:
+    material: "GOLDEN_AXE"
+    name: "&#FFC107&lFiveM Arena Region Editor"
+    lore:
+      - "&7Ляв клик: Точка 1"
+      - "&7Десен клик: Точка 2"
+    nbt-data: 202
+  spawn:
+    material: "BLAZE_ROD"
+    name: "&#4AA3FF&lFiveM Spawn Location Editor"
+    lore:
+      - "&7Кликни върху блок за задаване на спаун"
+    nbt-data: 203
+
+pvp: true

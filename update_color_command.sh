@@ -1,0 +1,55 @@
+#!/bin/bash
+cat << 'EOT' > patch_color.patch
+--- DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
++++ DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+@@ -40,17 +40,18 @@
+     }
+
+     private void sendUsage(CommandSender sender) {
+-        sender.sendMessage(DeltaEvents.color("&8&m----------------------------------------"));
+-        sender.sendMessage(DeltaEvents.color("&#4AA3FF&lColor Event Команди:"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color mrbeast start &7- Стартира MrBeast"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color mrbeast stop &7- Спира MrBeast"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color mrbeast editor spawn &7- Редактор на спаун"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color mrbeast reload &7- Релоудва MrBeast"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color fivem start &7- Стартира FiveM"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color fivem stop &7- Спира FiveM"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color fivem editor [arena|spawn] &7- Редактор за FiveM"));
+-        sender.sendMessage(DeltaEvents.color(" &8• &f/color fivem reload &7- Релоудва FiveM"));
+-        sender.sendMessage(DeltaEvents.color("&8&m----------------------------------------"));
++        sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_header")));
++        sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_title")));
++        if (DeltaEvents.hasAnyPermission(sender, "DeltaEvents.admin")) {
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_start")));
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_stop")));
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_editor")));
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_reload")));
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_start")));
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_stop")));
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_editor")));
++            sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_reload")));
++        }
++        sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_footer")));
+     }
+
+     private boolean handleMrBeast(CommandSender sender, String action, String[] args) {
+@@ -82,7 +83,7 @@
+                 break;
+             case "editor":
+                 if (!(sender instanceof Player player)) {
+-                    sender.sendMessage(DeltaEvents.color("&cСамо за играчи!"));
++                    sender.sendMessage(DeltaEvents.color(plugin.msg("mrbeast.only_players")));
+                     return true;
+                 }
+                 String region = "spawn";
+@@ -134,7 +135,7 @@
+                 break;
+             case "editor":
+                 if (!(sender instanceof Player player)) {
+-                    sender.sendMessage(DeltaEvents.color("&cСамо за играчи!"));
++                    sender.sendMessage(DeltaEvents.color(plugin.msg("fivem.only_players")));
+                     return true;
+                 }
+                 String regionF = "arena";
+EOT
+patch -p0 < patch_color.patch

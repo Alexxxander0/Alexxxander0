@@ -1,0 +1,78 @@
+# =====================================================================
+# Delta Events - Sumo Event Configuration
+# =====================================================================
+
+
+# Countdown in seconds before the event starts (when /sumo start is run)
+countdown-seconds: 5
+
+# Whether PvP is enabled in the event world during the event
+pvp: true
+
+# Block types that trigger player elimination when stepped on
+# Must be valid Bukkit Material names
+elimination-blocks:
+  - "STONE_BRICKS"
+  - "MOSSY_STONE_BRICKS"
+  - "CRACKED_STONE_BRICKS"
+
+# Floor block range (from x,y,z to x,y,z) that is temporarily removed for 2 seconds at the start of the event
+# Format: "x,y,z"
+floor-blocks:
+  from: "-104,28,-320"
+  to: "-114,26,-330"
+
+# Region where players must stand to be registered as active participants when the event starts
+# Format: "x,y,z"
+participant-region:
+  from: "-104,30,-320"
+  to: "-114,26,-330"
+
+# Spawn location where eliminated players are teleported and where players go on /sumo stop
+spawn-location:
+  x: -109.5
+  y: 27
+  z: -325.5
+  yaw: 0.0
+  pitch: 0.0
+
+# Editor item configurations for participant and spawn settings
+editor-item:
+  participant:
+    material: "BLAZE_ROD"
+    name: "&#4AA3FF&lSumo Participant Region Editor"
+    lore:
+      - "&7Ляв клик: Точка 1"
+      - "&7Десен клик: Точка 2"
+    nbt-data: 101
+  spawn:
+    material: "GOLDEN_AXE"
+    name: "&#FFC107&lSumo Spawn Location Editor"
+    lore:
+      - "&7Кликни върху блок за задаване на спаун"
+    nbt-data: 102
+  floor:
+    material: "GOLDEN_HOE"
+    name: "&#4CFF7A&lSumo Floor Blocks Editor"
+    lore:
+      - "&7Ляв клик: Точка 1"
+      - "&7Десен клик: Точка 2"
+    nbt-data: 103
+
+# Sumo Stick item configuration
+stick:
+  material: "BREEZE_ROD"
+  name: "&#4AA3FF&lСумо Пръчка"
+  lore:
+    - "&7Не нанася щети"
+  nbt-data: 100
+
+# Sounds used for different parts of the event (aliases defined in config.yml)
+sounds:
+  rules: "rules"
+  countdown: "countdown"
+  start: "start"
+  stop: "stop"
+  round: "round"
+
+  win: "win"

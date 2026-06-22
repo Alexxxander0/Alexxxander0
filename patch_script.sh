@@ -1,0 +1,17 @@
+#!/bin/bash
+sed -i 's/sender.sendMessage(DeltaEvents.color("&8&m----------------------------------------"));/sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_header")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color("&#4AA3FF&lColor Event Команди:"));/sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_title")));\n        if (DeltaEvents.hasAnyPermission(sender, "DeltaEvents.admin")) {/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color mrbeast start &7- Стартира MrBeast"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_start")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color mrbeast stop &7- Спира MrBeast"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_stop")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color mrbeast editor spawn &7- Редактор на спаун"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_editor")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color mrbeast reload &7- Релоудва MrBeast"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_mrbeast_reload")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color fivem start &7- Стартира FiveM"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_start")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color fivem stop &7- Спира FiveM"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_stop")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color fivem editor \[arena|spawn\] &7- Редактор за FiveM"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_editor")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(" &8• &f\/color fivem reload &7- Релоудва FiveM"));/    sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_fivem_reload")));\n        }/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+
+# Using sed line matching for closing usage footer since the first one matched header
+sed -i '54s/sender.sendMessage(DeltaEvents.color("&8&m----------------------------------------"));/sender.sendMessage(DeltaEvents.color(plugin.msg("color.usage_footer")));/' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+
+sed -i 's/sender.sendMessage(DeltaEvents.color("&cСамо за играчи!"));/sender.sendMessage(DeltaEvents.color(plugin.msg("mrbeast.only_players")));/g' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java
+sed -i 's/sender.sendMessage(DeltaEvents.color(plugin.msg("mrbeast.only_players")));/sender.sendMessage(DeltaEvents.color(plugin.msg("fivem.only_players")));/2' DeltaEvents/src/main/java/com/alexanderp/deltaevents/commands/ColorCommand.java

@@ -1,0 +1,41 @@
+# =====================================================================
+# Delta Events - MrBeast Event Configuration
+# =====================================================================
+
+countdown-seconds: 5
+round-duration-seconds: 15
+
+spawn-location:
+  x: 0.5
+  y: 65.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+editor-item:
+  spawn:
+    material: "BLAZE_ROD"
+    name: "&#4AA3FF&lMrBeast Spawn Location Editor"
+    lore:
+      - "&7Кликни върху блок за задаване на спаун"
+    nbt-data: 201
+
+pvp: true
+
+platforms:
+  red:
+    color-name: "&cЧЕРВЕНО"
+    from: "-10,64,-10"
+    to: "-5,65,-5"
+  green:
+    color-name: "&aЗЕЛЕНО"
+    from: "5,64,-10"
+    to: "10,65,-5"
+  blue:
+    color-name: "&9СИНЬО"
+    from: "-10,64,5"
+    to: "-5,65,10"
+  yellow:
+    color-name: "&eЖЪЛТО"
+    from: "5,64,5"
+    to: "10,65,10"

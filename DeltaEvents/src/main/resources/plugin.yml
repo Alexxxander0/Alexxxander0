@@ -1,0 +1,35 @@
+name: DeltaEvents
+main: com.alexanderp.deltaevents.DeltaEvents
+version: 1.0.0
+api-version: "1.21"
+author: Alexxx_ander
+commands:
+  deltaevents:
+    description: Delta Events main management command
+    usage: /deltaevents <help|reload>
+    aliases: [devents, de]
+  sumo:
+    description: Delta Events Sumo event command
+    usage: /sumo <rules|start|round|stop|reload>
+  koth:
+    description: Delta Events KOTH event command
+    usage: /koth <start|stop|editor|reload>
+  color:
+    description: Delta Events Color event command (mrbeast / fivem)
+    usage: /color <mrbeast|fivem> <start|stop|editor|reload>
+permissions:
+  DeltaEvents.admin:
+    description: Allows using administrative Delta Events commands
+    default: op
+  DeltaEvents.reload:
+    description: Allows reloading Delta Events
+    default: op
+  DeltaEvents.sumo.admin:
+    description: Allows managing the Sumo event (start, round, stop, reload)
+    default: op
+  DeltaEvents.sumo.rules:
+    description: Allows using /sumo rules command
+    default: op
+  DeltaEvents.koth.admin:
+    description: Allows managing the KOTH event (start, stop, editor, reload)
+    default: op

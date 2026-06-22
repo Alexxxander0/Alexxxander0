@@ -1,0 +1,19 @@
+# =====================================================================
+# Delta Events Configuration
+# =====================================================================
+
+debug: false
+
+# The world where all events take place
+event-world: "BuilderUniverse"
+
+
+# Global Sound Mappings (Alias -> Minecraft Sound Key)
+# Supports custom resource pack sounds (e.g. delta.txadmin) or standard minecraft sounds.
+sounds:
+  notification: "entity.experience_orb.pickup"
+  countdown: "block.note_block.pling"
+  start: "entity.ender_dragon.growl"
+  stop: "entity.wither.death"
+  round: "entity.player.levelup"
+  rules: "entity.arrow.hit_player"
